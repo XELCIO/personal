@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0" />
+  <title>Lonely</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="Tried to swim, swallowed by an ocean of ego" />
+  <link rel="icon" type="image/png" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+</head>
+
+<body onclick="playBackgroundMusic()">
+  <section>
+    <img class="hero" src="lonely.png" alt="geto" />
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <h1 class="title one">地獄</h1>
+          <img src="1.jpeg" alt="Shibuya" />
+        </div>
+
+        <div class="swiper-slide">
+          <h1 class="title two"></h1>
+          <img src="2.jpeg" alt="" />
+        </div>
+
+        <div class="swiper-slide">
+          <h1 class="title three"></h1>
+          <img src="3.jpeg" alt="" />
+        </div>
+
+        <div class="swiper-slide">
+          <h1 class="title four"></h1>
+          <img src="7.jpeg" alt="" />
+        </div>
+
+        <div class="swiper-slide">
+          <h1 class="title five"></h1>
+          <img src="5.jpeg" alt="" />
+        </div>
+
+        <div class="swiper-slide">
+          <h1 class="title six"></h1>
+          <img src="6.jpeg" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <audio id="backgroundMusic" autoplay loop>
+    <source src="/closure-pamungkas.mp3" type="audio/mp3">
+    <!-- Sertakan format audio lain jika diperlukan -->
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    var swiper = new Swiper(".swiper", {
+      grabCursor: true,
+      speed: 500,
+      effect: "slide",
+      loop: true,
+      mousewheel: {
+        invert: false,
+        sensitivity: 1
+      }
+    });
+    swiper.enable();
+  </script>
+  <script>
+    var backgroundMusic = document.getElementById("backgroundMusic");
+
+    function playBackgroundMusic() {
+      backgroundMusic.play();
+    }
+  </script>
+</body>
+
+</html>
