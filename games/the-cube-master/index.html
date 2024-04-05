@@ -201,11 +201,11 @@
       }
 
       .popup-box {
-        background: #FFC2BB;
+        background: linear-gradient(to top, #ffc0cb, #ff69b4);
       }
 
       .popup-content p {
-        color: #d8d8d8;
+        color: #576271;
       }
 
       .mask {
@@ -222,11 +222,11 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        border-bottom: solid 1px #d6d6d6;
+        border-bottom: solid 1px #576271;
         margin-bottom: 16px;
         min-height: 68px;
         text-align: center;
-        color: #4A251F;
+        color: #4a251f;
       }
 
       img {
@@ -254,7 +254,7 @@
       .btn-submit {
         color: #fff;
         text-shadow: 0 1px 1px rgba(0, 0, 0, 0.36);
-        background: #DCA68B;
+        background: #468fff;
       }
 
       .btn-default,
@@ -276,7 +276,7 @@
         cursor: pointer;
         transition: all 0.2s ease-out;
         font-size: large;
-        color: #FFC2BB;
+        color: #fff;
       }
 
       button {
@@ -288,11 +288,15 @@
         position: relative;
       }
     </style>
-    <div class="popup-title">WELCOME TO THE FINAL CHALLENGE</div>
     <div class="popup-block">
-      <img src="https://media.tenor.com/wkzCX9s5kxQAAAAi/0906-peacegoma.gif">
+      <img src="/src/cat.webp" alt="hewwo" />
       <div class="btn-group"><button class="btn-submit" onclick="hidePopupAndPlayMusic()">Konfirm</button></div>
     </div>
+    <audio id="backgroundMusic" autoplay loop>
+      <source src="/music/bgm/bgm.mp3" type="audio/mp3">
+      <!-- Sertakan format audio lain jika diperlukan -->
+      Your browser does not support the audio element.
+    </audio>
     <script>
       function showPopup() {
         // Tampilkan pop-up
