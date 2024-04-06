@@ -13,9 +13,39 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <style>
+    .loader {
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #3498db;
+      width: 120px;
+      height: 120px;
+      -webkit-animation: spin 2s linear infinite; /* Safari */
+      animation: spin 2s linear infinite;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin-top: -60px; /* Sesuaikan dengan setengah dari tinggi loader */
+      margin-left: -60px; /* Sesuaikan dengan setengah dari lebar loader */
+      z-index: 9999; /* Menempatkan loader di atas konten lain */
+      display: none; /* Mulai dengan menyembunyikan loader */
+    }
+  
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+  
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+  
 </head>
 
 <body>
+  <div id="loader" class="loader"></div>
   <section>
     <div class="recipe-container">
       <h1>Mini Games</h1>
@@ -27,7 +57,7 @@
             <div class="post-body">
               <img class="post-avatar" src="https://raw.githubusercontent.com/XELCIO/personal/main/games/the-cube-master/assets/icons/android-chrome-192x192.png" alt="avatar" />
               <div class="post-detail">
-                <h2 class="post-name">The Cube</h2>
+                <h2 class="post-name" onclick="redirectToCube()">The Cube</h2>
                 <p class="post-author">Custom Rubik Game</p>
               </div>
 
@@ -68,7 +98,7 @@
             <div class="post-body">
               <img class="post-avatar" src="https://i.pinimg.com/564x/13/f5/0c/13f50c80a451c7d070d4f2d8f59843c3.jpg" alt="avatar" />
               <div class="post-detail">
-                <h2 class="post-name">2048</h2>
+                <h2 class="post-name" onclick="redirectTo2048()">2048</h2>
                 <p class="post-author">Simple 2048 game</p>
               </div>
 
@@ -109,7 +139,7 @@
             <div class="post-body">
               <img class="post-avatar" src="https://www.svgrepo.com/show/288296/tic-tac-toe.svg" alt="avatar" />
               <div class="post-detail">
-                <h2 class="post-name">Tic-Tac-Toe</h2>
+                <h2 class="post-name" onclick="redirectToTicTacToe()">Tic-Tac-Toe</h2>
                 <p class="post-author">Multiplayer</p>
               </div>
 
@@ -150,7 +180,7 @@
             <div class="post-body">
               <img class="post-avatar" src="https://www.svgrepo.com/show/210347/sudoku.svg" alt="avatar" />
               <div class="post-detail">
-                <h2 class="post-name">Sudoku</h2>
+                <h2 class="post-name" onclick="redirectToSudoku()">Sudoku</h2>
                 <p class="post-author">Intermediate level</p>
               </div>
 
@@ -191,7 +221,7 @@
             <div class="post-body">
               <img class="post-avatar" src="https://www.svgrepo.com/show/476763/stack.svg" alt="avatar" />
               <div class="post-detail">
-                <h2 class="post-name">Tower Block</h2>
+                <h2 class="post-name" onclick="redirectToTowerBlock()">Tower Block</h2>
                 <p class="post-author">Endless tower block</p>
               </div>
 
@@ -232,7 +262,7 @@
             <div class="post-body">
               <img class="post-avatar" src="/src/xelcio.jpeg" alt="avatar" />
               <div class="post-detail">
-                <h2 class="post-name">Xelcio</h2>
+                <h2 class="post-name" onclick="redirectToSliders()">Xelcio</h2>
                 <p class="post-author">Places</p>
               </div>
 
@@ -300,6 +330,17 @@
       window.location.href = '/others/sliders/index.html';
     }
   </script>
+  <script>
+    // Menampilkan loader saat pengguna berpindah halaman
+    document.addEventListener('DOMContentLoaded', function () {
+      document.body.classList.add('loading');
+    });
+  
+    // Menyembunyikan loader saat konten halaman selesai dimuat
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+    });
+  </script>  
   <script src="control.js"></script>
 </body>
 
