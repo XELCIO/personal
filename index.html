@@ -13,39 +13,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <style>
-    .loader {
-      border: 16px solid #f3f3f3;
-      border-radius: 50%;
-      border-top: 16px solid #3498db;
-      width: 120px;
-      height: 120px;
-      -webkit-animation: spin 2s linear infinite; /* Safari */
-      animation: spin 2s linear infinite;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      margin-top: -60px; /* Sesuaikan dengan setengah dari tinggi loader */
-      margin-left: -60px; /* Sesuaikan dengan setengah dari lebar loader */
-      z-index: 9999; /* Menempatkan loader di atas konten lain */
-      display: none; /* Mulai dengan menyembunyikan loader */
-    }
-  
-    @-webkit-keyframes spin {
-      0% { -webkit-transform: rotate(0deg); }
-      100% { -webkit-transform: rotate(360deg); }
-    }
-  
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
-  
 </head>
 
 <body>
-  <div id="loader" class="loader"></div>
   <section>
     <div class="recipe-container">
       <h1>Mini Games</h1>
@@ -330,17 +300,6 @@
       window.location.href = '/others/sliders/index.html';
     }
   </script>
-  <script>
-    // Menampilkan loader saat pengguna berpindah halaman
-    document.addEventListener('DOMContentLoaded', function () {
-      document.body.classList.add('loading');
-    });
-  
-    // Menyembunyikan loader saat konten halaman selesai dimuat
-    window.addEventListener('load', function () {
-      document.body.classList.remove('loading');
-    });
-  </script>  
   <script src="control.js"></script>
 </body>
 
